@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamfishh farm | Premium Betta Fish Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700;800&family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .category-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .category-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #FFF;
+            width: 45px;
+            height: 45px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">KAMFISHH <span>FARM</span></a>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                    <div class="nav-icons">
+                        <!-- Search Icon (Optional) -->
+                        <!-- <a href="#" style="color:white; font-size:1.2rem;">🔍</a> -->
+                        
+                        <!-- Cart Icon Removed as per request -->
+                        
+                        <div class="hamburger">
+                            ☰
+                        </div>
+                    </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Background Element (Abstract) -->
+        <div class="hero-bg-element"></div>
+        
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <span class="hero-subtitle">Premium Quality Betta Fish</span>
+                    <h1 class="hero-title">keindahan luar biasa untuk <span class="hero-highlight">Akuarium anda</span></h1>
+                    <p class="hero-description">
+                        Koleksi ikan cupang pilihan dengan kualitas kontes. Temukan keindahan warna dan bentuk yang memukau. Garansi ikan hidup sampai tujuan.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="shop.html" class="btn btn-primary">Beli Sekarang</a>
+                        <a href="#categories" class="btn btn-outline">Lihat Kategori</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper">
+                     <img src="images/hero-betta.jpg" alt="Betta Fish" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" style="background: var(--bg-dark);">
+        <div class="container">
+            <h2 class="section-title">Kategori Utama</h2>
+            <p class="section-subtitle">Pilihan jenis ikan cupang terbaik kami</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div class="category-card" onclick="window.location.href='shop.html?category=Plakat'">
+                    <div style="width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 20px; margin-bottom: 15px;">
+                        <img src="images\p1.jpeg" alt="Plakat Betta" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Plakat</h3>
+                    <p style="color: var(--text-muted); font-size: 0.8rem;">Dumbo Ear & Multicolor</p>
+                </div>
+                <div class="category-card" onclick="window.location.href='shop.html?category=Halfmoon'">
+                    <div style="width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 20px; margin-bottom: 15px;">
+                        <img src="images/halfmoon-icon.jpg" alt="Halfmoon Betta" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Halfmoon</h3>
+                    <p style="color: var(--text-muted); font-size: 0.8rem;">Dumbo Ear Multicolor</p>
+                </div>
+                <div class="category-card" onclick="window.location.href='shop.html?category=YellowBase'">
+                    <div style="width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 20px; margin-bottom: 15px;">
+                        <img src="images/yellow-base-icon.jpg" alt="Yellow Base Betta" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Yellow Base</h3>
+                    <p style="color: var(--text-muted); font-size: 0.8rem;">Vibrant Yellow</p>
+                </div>
+                <div class="category-card" onclick="window.location.href='shop.html?category=Barongsai'">
+                    <div style="width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 20px; margin-bottom: 15px;">
+                        <img src="images/barongsai-icon.jpg" alt="Barongsai Betta" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Barongsai</h3>
+                    <p style="color: var(--text-muted); font-size: 0.8rem;">Unique Pattern</p>
+                </div>
+                <div class="category-card" onclick="window.location.href='shop.html?category=Bumblebee'">
+                    <div style="width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 20px; margin-bottom: 15px;">
+                        <img src="images/bumblebee-icon.jpg" alt="Bumblebee Betta" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Bumblebee</h3>
+                    <p style="color: var(--text-muted); font-size: 0.8rem;">Black & Yellow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Features / Trust Badges -->
+    <section style="background: var(--bg-card);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">🏆</div>
+                    <h3 style="color: white; margin-bottom: 10px;">Contest Quality</h3>
+                    <p style="color: var(--text-muted);">Setiap ikan dikurasi dengan standar kualitas tinggi untuk kepuasan Anda.</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">📦</div>
+                    <h3 style="color: white; margin-bottom: 10px;">Safe Shipping</h3>
+                    <p style="color: var(--text-muted);">Garansi pengiriman aman ke seluruh Indonesia (Dead on Arrival Warranty).</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">💬</div>
+                    <h3 style="color: white; margin-bottom: 10px;">Expert Support</h3>
+                    <p style="color: var(--text-muted);">Konsultasi perawatan gratis seumur hidup setelah pembelian.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div style="position: relative;">
+                    <div style="position: absolute; top: -20px; left: -20px; width: 100px; height: 100px; background: var(--primary); opacity: 0.1; border-radius: 50%; filter: blur(20px);"></div>
+                    <img src="images/owner.jpg" alt="Owner Kamfish Farm" style="width: 100%; max-width: 500px; aspect-ratio: 1/1; border-radius: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); object-fit: cover; border: 1px solid rgba(255,255,255,0.1); position: relative; z-index: 1;">
+                </div>
+                <div class="about-text">
+                    <span style="color: var(--primary); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">About Kamfish</span>
+                    <h3>Ikan Cupang Berkualitas Tinggi, Dibudidayakan dengan Penuh Dedikasi</h3>
+                    <p>
+                        KAMFISHH FARM bermula dari hobi kecil di tahun 2020 yang kini berkembang menjadi farm profesional. Kami fokus pada pengembangan genetika ikan cupang hias modern seperti Multicolor, Yellow Koi Cooper, Red Koi Cooper, Barongsai, Dumbo Ear Multycolor dan lain lain.
+                    </p>
+                    <p>
+                        Misi kami sederhana: Menyediakan ikan cupang berkualitas dengan harga yang special bagi semua penghobi di Indonesia. Setiap ikan yang kami kirim telah melewati proses karantina ketat.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h4>2.5k+</h4>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>500+</h4>
+                            <p>Pairs Bred</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>99%</h4>
+                            <p>Safe Warranty</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" style="background: var(--bg-dark); padding: 80px 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 class="section-title">Visual Gallery</h2>
+                <p class="section-subtitle">Keindahan autentik dari farm kami. Tanpa filter, murni kualitas.</p>
+            </div>
+            
+            <div id="gallery-grid" class="masonry-grid">
+                <!-- Gallery items rendered via JS -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="shop.html" class="btn btn-outline">Lihat Koleksi Lengkap →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <video class="lightbox-content" id="lightbox-video" controls style="display:none;"></video>
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Punya pertanyaan seputar perawatan atau pesanan khusus?</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;" class="contact-container">
+                <form id="contact-form" onsubmit="event.preventDefault(); window.open('https://wa.me/6285850312500?text=' + encodeURIComponent(document.getElementById('msg').value), '_blank');">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Nomor WhatsApp" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="msg" class="form-input" placeholder="Tulis pesan Anda disini..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim via WhatsApp 💬</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 20px; display: inline-block;">KAMFISHH <span>FARM</span></a>
+                    <p>Menyediakan ikan cupang kualitas premium untuk hobiis dan kolektor.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <a href="shop.html">All Products</a>
+                    <a href="shop.html">New Arrivals</a>
+                    <a href="shop.html">Best Sellers</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="https://www.instagram.com/kamfishh_farm/?hl=id" target="_blank">Instagram</a>
+                    <a href="https://www.facebook.com/share/1RnPSvxDk1/?mibextid=wwXIfr" target="_blank">Facebook</a>
+                    <a href="https://wa.me/6285850312500" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 KAMFISHH FARM. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6285850312500" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

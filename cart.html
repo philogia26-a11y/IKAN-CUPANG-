@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Kamfishh farm </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">KAMFISHH <span>farm</span></a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                </div>
+                <div class="nav-icons">
+                    <!-- Cart Removed -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div style="padding-top: var(--header-height);"></div>
+
+    <section>
+        <div class="container">
+            <h1 class="section-title">Your Cart</h1>
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div id="cart-items">
+                    <!-- Rendered by JS -->
+                </div>
+                
+                <!-- Summary -->
+                <div class="order-summary">
+                    <h3 style="color: #fff; margin-bottom: 20px;">Order Summary</h3>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 20px; color: var(--text-muted);">
+                        <span>Total Estimate</span>
+                        <span id="cart-total" style="color: #fff; font-weight: bold;">Rp 0</span>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="checkout()">Checkout via WhatsApp</button>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 15px; text-align: center;">
+                        You will be redirected to WhatsApp to send your order details to the seller.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2026 Kamfishh farm. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

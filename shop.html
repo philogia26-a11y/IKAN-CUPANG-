@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Kamfishh farm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        .filter-bar {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .filter-group label {
+            display: block;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        .filter-select {
+            width: 100%;
+            padding: 10px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: #fff;
+            outline: none;
+        }
+        .filter-select:focus {
+            border-color: var(--primary);
+        }
+        
+        /* 5-Column Grid for Bento Layout */
+        #catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr) !important;
+            gap: 20px;
+        }
+        
+        /* Banner Selection Style */
+        .promo-banner {
+            grid-column: span 3;
+            background: linear-gradient(135deg, #1e3a8a 0%, #000000 100%);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid rgba(255,215,0,0.3);
+            position: relative;
+            overflow: hidden;
+            height: 100%; /* Ensure it fills the grid cell height */
+        }
+        
+        .promo-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(255,215,0,0.1) 0%, transparent 70%);
+            z-index: 1;
+        }
+        
+        .promo-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .promo-title {
+            font-family: 'Great Vibes', cursive; /* Fallback to cursive if not loaded */
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 5px;
+        }
+        
+        .promo-subtitle {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .btn-gold {
+            background: linear-gradient(to right, #FFD700, #B8860B);
+            color: #000;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-size: 0.8rem;
+        }
+        
+        .btn-gold:hover {
+            transform: scale(1.05);
+        }
+
+        /* Card with Name Styling */
+        .shop-card {
+            background: #0F1115;
+            border-radius: 16px;
+            border: 1px solid #1F2933;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .shop-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .shop-card-img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            background: #000;
+        }
+        
+        .shop-card-body {
+            padding: 10px;
+            text-align: center;
+            background: linear-gradient(to top, #0F1115, #161b22);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .shop-card-title {
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .shop-card-sub {
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            margin-top: 3px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            #catalog-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+            .promo-banner {
+                grid-column: span 4;
+                order: -1; 
+            }
+        }
+        
+        @media (max-width: 900px) {
+            #catalog-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+            .promo-banner {
+                grid-column: span 3;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #catalog-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            .promo-banner {
+                grid-column: span 2;
+            }
+        }
+
+        .gallery-item {
+            aspect-ratio: 1/1;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border-color: var(--primary);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Remove default product-grid class style interference if necessary by keeping ID priority high */
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">KAMFISHH<span>FARM</span></a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="shop.html" class="active">Shop</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="nav-icons">
+                    <!-- Cart Removed -->
+                    <div class="hamburger">☰</div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div style="padding-top: var(--header-height);"></div>
+
+    <section>
+        <div class="container">
+            <div style="text-align: center;">
+                <h1 class="section-title">Shop Collection</h1>
+                <p class="section-subtitle">Temukan ikan cupang impianmu dari koleksi terbaik kami.</p>
+            </div>
+
+
+
+            <div class="product-grid" id="catalog-grid">
+                <!-- Products rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2026 Kamfishh farm. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
